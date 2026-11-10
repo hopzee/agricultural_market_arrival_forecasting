@@ -1,0 +1,3 @@
+-r requirements.txt
+# TensorFlow support depends on your operating system and Python version.
+tensorflow>=2.15
