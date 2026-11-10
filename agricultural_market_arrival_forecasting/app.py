@@ -25,13 +25,22 @@ with st.sidebar:
 if uploaded is None:
     st.markdown("### Getting started")
     st.write("Upload your historical dataset to begin. The application does not generate or insert fake research records.")
-    st.markdown("""**Workflow**
-    1. Upload and validate the dataset.
-    2. Select one commodity and one state.
-    3. Inspect historical arrivals and reporting gaps.
-    4. Evaluate models using chronological training, validation and test periods.
-    5. Generate and download future arrival forecasts and evaluation results.
-    """)
+    st.markdown("### Getting started")
+    st.write("Upload your historical dataset to begin. The application does not generate or insert fake research records.")
+
+    st.markdown("### Project workflow")
+
+    workflow_steps = [
+        "Upload and validate the dataset.",
+        "Select one commodity and one state.",
+        "Inspect historical arrivals and reporting gaps.",
+        "Evaluate models using chronological training, validation and test periods.",
+        "Generate and download future arrival forecasts and evaluation results."
+    ]
+
+    for number, step in enumerate(workflow_steps, start=1):
+        st.markdown(f"**{number}.** {step}")
+
     st.stop()
 
 try:
